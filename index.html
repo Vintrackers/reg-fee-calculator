@@ -269,9 +269,9 @@
             }
 
             // Event listeners
-            document.getElementById('salesDate').addEventListener('change', calculate);
-            document.getElementById('regExpiration').addEventListener('change', calculate);
-            document.getElementById('titleAvailable').addEventListener('change', () => handleCheckboxChange('titleAvailable'));
+            document.getElementById('salesDate').addEventListener('input', calculate);
+            document.getElementById('regExpiration').addEventListener('input', calculate);
+            document.getElementById('titleAvailable').addEventListener('change', () => handleCheckboxinput('titleAvailable'));
             document.getElementById('titleNotAvailable').addEventListener('change', () => handleCheckboxChange('titleNotAvailable'));
 
             // Make clearAllFields globally accessible
