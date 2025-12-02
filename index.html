@@ -244,14 +244,10 @@
                     const field5AtMidnight = new Date(calculatedDate.getFullYear(), calculatedDate.getMonth(), calculatedDate.getDate());
                     const salesDateAtMidnight = new Date(field1_salesDate.getFullYear(), field1_salesDate.getMonth(), field1_salesDate.getDate());
 
-                    // LOGIC: If Field 5 date is BEFORE Field 1 (Sales Date), check Field 7 (Transfer Fee)
-                    if (field5AtMidnight.getTime() < salesDateAtMidnight.getTime()) {
-                        field7_chargeTransferFee.checked = true;
-                    }
-                    // LOGIC: If Field 5 date is AFTER Field 1 (Sales Date), check Field 6 (Full Fee)
-                    else if (field5AtMidnight.getTime() > salesDateAtMidnight.getTime()) {
-                        field6_chargeFullFee.checked = true;
-                    }
+                // LOGIC: If Field 5 date is BEFORE Field 1 (Sales Date), check Field 6 (Full Reg Fee)                    if (field5AtMidnight.getTime() < salesDateAtMidnight.getTime()) {
+                    field6_chargeFullFee.checked = true;                    }
+                // LOGIC: If Field 5 date is AFTER Field 1 (Sales Date), check Field 7 (Transfer Fee)                    else if (field5AtMidnight.getTime() > salesDateAtMidnight.getTime()) {
+                    field7_chargeTransferFee.checked = true;                    }
                     // If equal, no fee checkbox is checked
                 }
             }
